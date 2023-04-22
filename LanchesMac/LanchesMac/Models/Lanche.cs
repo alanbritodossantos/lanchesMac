@@ -4,8 +4,10 @@ using System.Xml.Linq;
 
 namespace LanchesMac.Models
 {
+    [Table("Lanches")]
     public class Lanche
     {
+        [Key]
         public int LancheId { get; set; }
 
         [Required(ErrorMessage = "O nome do lanche deve ser informado")]
