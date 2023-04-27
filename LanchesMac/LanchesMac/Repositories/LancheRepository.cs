@@ -12,7 +12,7 @@ namespace LanchesMac.Repositories
         public LancheRepository(AppDbContext contexto) 
         {
             _context= contexto;
-        }
+        }    
 
         public IEnumerable<Lanche> Lanches => _context.Lanches.Include(c => c.Categoria);
 
@@ -22,7 +22,7 @@ namespace LanchesMac.Repositories
 
         public Lanche GetLancheById(int lancheId)
         {
-            return _context.Lanches.FirstOrDefault(l=>l.LancheId==lancheId);
+            return _context.Lanches.FirstOrDefault(l=>l.LancheId==lancheId); 
         }
     }
 }
